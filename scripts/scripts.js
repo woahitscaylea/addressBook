@@ -5,9 +5,9 @@ class AddressBook {
     this.contacts = [];
   }
   add(name, email, phone, relation) {
-    let newContact = new Contact("caylea", "wcay@gmail", 1111111111, "self");
-    this.contacts.push(newContact);
-    // this.contacts.push(new Contact("caylea", "wcay@gmail", 1111111111, "self"));
+    // let newContact = new Contact(name, email, phone, relation);
+    // this.contacts.push(newContact);
+    this.contacts.push(new Contact(name, email, phone, relation));
   }
   delete(name) {
     const index = this.contacts.findIndex(contact => {
@@ -36,6 +36,7 @@ class Contact {
 }
 
 const addressBook = new AddressBook();
+addressBook.add("Caylea", "cay@gmail.com", 111, "self");
 addressBook.add("Bob", "b@gmail.com", 1, "dude");
 addressBook.print();
 addressBook.delete("Bob");
